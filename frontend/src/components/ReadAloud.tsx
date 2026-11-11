@@ -110,3 +110,4 @@ export default function ReadAloud({ text, lang }: ReadAloudProps) {
     </button>
   );
 }
+
