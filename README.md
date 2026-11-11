@@ -12,12 +12,13 @@ Built for the **Seva First Innovation Challenge Maharashtra** (Emerging Technolo
 
 | Capability | Purpose | Status |
 | --- | --- | --- |
-| **Multilingual Scam Triage** (`POST /api/triage`) | Analyzes pasted text, links, and phone numbers; returns risk level (`low`, `medium`, `high`), scam category, up to 3 plain-language reasons, and up to 3 next steps. | Phase 0 scaffold on `main`; normalizer and rule engine on `feat/triage-core`; LLM fusion and UI next. |
-| **Link & Number Checks** (`POST /api/link-check`) | Offline checks for brand/bank lookalike distance, URL shorteners, punycode, suspicious TLDs, and a local seeded blocklist. | Planned (Phase 2). |
-| **Synthetic Media Check — Experimental** (`POST /api/media-check`) | Scores images, extracted video keyframes (Sightengine Free Tier), and audio (Hugging Face / acoustic heuristics) into cautious signal bands (`unlikely`, `unclear`, `possible_synthetic`). | Planned (Phase 2); Sightengine Free Tier verified. |
-| **Family Safe Word** | Client-side challenge phrase and callback verification checklist (shareable text + QR) that works offline even against voice clones. | Planned (Phase 2). |
-| **I Was Scammed Flow** | Step-by-step emergency actions centered on India's **1930** cyber helpline (`tel:1930`), `cybercrime.gov.in`, and a client-side `jsPDF` evidence summary. | Planned (Phase 2); `1930` helpline banner live in shell. |
-| **District Scam Dashboard** | Synthetic sample district trends clearly labeled `sample: true`. | Planned (Phase 2). |
+| **Multilingual Scam Triage** (`POST /api/triage`) | Analyzes pasted text, links, and phone numbers; returns risk level (`low`, `medium`, `high`), scam category, up to 3 plain-language reasons, and up to 3 next steps. | Implemented and verified; rule-floor fusion with Gemini reasoning. |
+| **Link & Number Checks** (`POST /api/link-check`) | Offline checks for brand/bank lookalike distance, URL shorteners, punycode, suspicious TLDs, and a local seeded blocklist. | Implemented and active. |
+| **Synthetic Media Check — Experimental** (`POST /api/media-check`) | Scores images and extracted video keyframes (Sightengine Free Tier), and audio (Hugging Face) into cautious signal bands (`unlikely`, `unclear`, `possible_synthetic`). | Implemented with daily budget guard and safe band descriptors. |
+| **Family Safe Word** | Client-side challenge phrase and callback verification checklist (shareable text + QR code) that works offline even against voice clones. | Implemented (`/safe-word`). |
+| **I Was Scammed Flow** | Step-by-step emergency actions centered on India's **1930** cyber helpline (`tel:1930`), `cybercrime.gov.in`, and client-side incident PDF generation. | Implemented (`/scammed`). |
+| **District Scam Dashboard** | Synthetic sample district trends clearly labeled with a visible `sample: true` banner. | Implemented (`/dashboard`). |
+| **Voice Read Aloud** | In-browser speech synthesis for triage advice in Marathi (`mr-IN`), Hindi (`hi-IN`), or English. | Implemented via Web Speech API. |
 
 ---
 
@@ -61,29 +62,38 @@ SevaInnoHackathon/
   backend/
     app/
       config.py          # Settings loaded from root .env
-      main.py            # FastAPI app, CORS, request-id + metadata-only logging, /api/health
+      errors.py          # Localized error responses (422, 429, 500)
+      fuse.py            # Rule-floor fusion logic
+      limiter.py         # SlowAPI rate limiter
+      links.py           # Offline URL and phone number sanity checks
+      llm.py             # Gemini Interactions API integration with retry & fallback
+      main.py            # FastAPI app, middleware, routes mounting
+      media.py           # Sightengine & HF audio adapters
+      normalize.py       # Devanagari/Latin normalization, regex extractors
+      rules.py           # Multilingual pattern evaluation engine
       schemas.py         # TriageIn, LlmOut, TriageOut, ErrorOut, HealthOut
+      routes/            # triage, link_check, media_check, dashboard
+    data/                # patterns_{mr,hi,en}.json, brands.json, blocklist.json, dashboard_sample.json
     scripts/
-      smoke_gemini.py    # Phase 0.4 Gemini Interactions API Marathi JSON verification
-    tests/
-      test_health.py     # Health check, x-request-id header, flat LlmOut schema test
+      smoke_gemini.py    # Gemini Interactions API Marathi JSON verification
+      rules_baseline.py  # Rule engine baseline accuracy checker
+    tests/               # 68 comprehensive unit, contract, privacy, and failure drill tests
     requirements.txt
   frontend/
     public/              # manifest.webmanifest, sw.js, icon.svg
     src/
+      components/        # ResultCard, LangToggle, PrivacyNotice, ReadAloud
+      pages/             # Check, SafeWord, Scammed, Media, Dashboard
+      lib/               # api.ts, safeWord.ts, pdf.ts
       i18n/              # mr.json (default), hi.json, en.json
-      App.tsx            # Language toggle, privacy notice, Phase 0 shell, 1930 helpline bar
+      App.tsx            # Main shell, responsive nav, lazy-loaded routes
     package.json
-  datasets/              # MIT & Apache-2.0 Indian multilingual scam/ham seed corpora
-  testset/               # 40-message balanced evaluation set (20 scam / 20 genuine, 30 dev / 10 holdout)
-  summaries/             # Phase completion notes (PHASE_0_SUMMARY.md)
-  .githooks/pre-push     # Blocks committing .env or accidental API key strings
-  .env.example           # Backend environment template
-  MISTAKES.md            # Logged technical issues and fixes
-  *.md                   # Product, technical, architecture, roadmap, and testing specs
+  datasets/              # Multilingual scam/ham seed corpora
+  testset/               # 40-message balanced evaluation set + eval.py harness
+  summaries/             # Phase completion documentation (PHASE_0, 1, 2)
+  render.yaml            # Render deployment blueprint
+  .githooks/pre-push     # Secret scanning hook
 ```
-
-*Note: Active Phase 1 implementation (`normalize.py`, `rules.py`, `patterns_{mr,hi,en}.json`, `rules_baseline.py`, and unit tests) is developed on branch `feat/triage-core`.*
 
 ---
 
