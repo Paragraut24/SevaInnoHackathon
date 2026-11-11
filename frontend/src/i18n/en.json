@@ -5,10 +5,23 @@
   "privacy_title": "Privacy Notice",
   "privacy_body": "Sajag stores nothing; text you check is sent to Google's Gemini API (Free Tier) for analysis.",
   "privacy_ok": "Got it",
-  "placeholder_title": "Message & Link Triage (Phase 1 next)",
-  "placeholder_desc": "Phase 0 foundation is ready. Suspicious message, link, and phone-number triage lands in Phase 1.",
   "helpline_label": "Emergency Cyber Helpline:",
   "call_1930": "Call 1930",
-  "footer_disclaimer": "Independent civic project; not an official government service or legal advice."
+  "footer_disclaimer": "Independent civic project; not an official government service or legal advice.",
+  "check_title": "Check a suspicious message",
+  "check_hint": "Paste the message you received below. We will look for signs of a scam.",
+  "check_placeholder": "Paste the message here...",
+  "check_submit": "Check",
+  "check_loading": "Checking...",
+  "char_count": "{{used}}/{{max}}",
+  "risk_low": "No clear signs found",
+  "risk_medium": "Be careful: some warning signs",
+  "risk_high": "High risk: strong signs of a scam",
+  "scam_type_label": "Likely type",
+  "reasons_title": "Why we think so",
+  "steps_title": "What to do now",
+  "confidence_label": "Confidence",
+  "quick_label": "Quick check (without AI)",
+  "error_network": "Could not reach the server. Please check your internet and try again.",
+  "error_generic": "Something went wrong. Please try again."
 }
-
