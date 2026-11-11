@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "i18next": "^24.2.3",
+    "jspdf": "^4.2.1",
+    "qrcode.react": "^4.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^15.4.1"
+    "react-i18next": "^15.4.1",
+    "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.14",
@@ -24,4 +27,3 @@
     "vite": "^6.2.2"
   }
 }
-
