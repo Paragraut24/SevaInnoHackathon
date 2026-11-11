@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import ReadAloud from "./ReadAloud";
 import type { Risk, TriageResult } from "../lib/api";
 
 const RISK_STYLES: Record<Risk, { card: string; badge: string; bar: string }> = {
@@ -17,15 +18,21 @@ export default function ResultCard({ result }: { result: TriageResult }) {
       aria-live="polite"
       className={`bg-white border-2 ${style.card} rounded-xl p-6 space-y-4 shadow-xs`}
     >
-      <div className="flex flex-wrap items-center gap-2">
-        <span className={`px-3 py-1 rounded-full text-base font-semibold ${style.badge}`}>
-          {t(`risk_${result.risk}`)}
-        </span>
-        {result.mode === "quick" && (
-          <span className="px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700">
-            {t("quick_label")}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className={`px-3 py-1 rounded-full text-base font-semibold ${style.badge}`}>
+            {t(`risk_${result.risk}`)}
           </span>
-        )}
+          {result.mode === "quick" && (
+            <span className="px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700">
+              {t("quick_label")}
+            </span>
+          )}
+        </div>
+        <ReadAloud
+          text={`${result.scam_type}. ${result.reasons.join(". ")}. ${result.next_steps.join(". ")}`}
+          lang={result.lang}
+        />
       </div>
 
       <p className="text-base text-slate-900">
