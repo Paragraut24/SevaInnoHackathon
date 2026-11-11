@@ -1,0 +1,79 @@
+{
+  "cues": [
+    {"category_id": "generic", "cue_group": "urgency", "weight": 1, "patterns": ["\\burgent(ly)?\\b", "\\bimmediately\\b", "\\bright now\\b", "\\bat once\\b", "\\bwithout delay\\b", "\\bwithin \\d+ ?(minutes?|mins?|hours?|hrs?)\\b", "\\blast chance\\b", "\\btonight\\b", "\\bturant\\b", "\\bjaldi\\b"]},
+    {"category_id": "generic", "cue_group": "secrecy", "weight": 2, "patterns": ["\\b(do not|don'?t|dont) (tell|inform|share this with) (anyone|anybody|family)\\b", "\\bkeep (this|it) (a )?(secret|confidential)\\b", "\\bconfidential\\b", "\\bkisi ko (mat|na) (batana|bataye|batayein)\\b"]},
+    {"category_id": "generic", "cue_group": "link_otp", "weight": 2, "patterns": ["\\b(bit\\.ly|tinyurl\\.com|t\\.me|wa\\.me|goo\\.gl|cutt\\.ly|is\\.gd|rb\\.gy|shorturl\\.at)/", "\\bclick (on )?(the )?(link|here|below)\\b", "\\bxn--"]},
+    {"category_id": "otp_request", "cue_group": "link_otp", "weight": 2, "guard": true, "patterns": ["\\b(share|send|tell|give|provide|forward)\\b.{0,25}\\b(otp|cvv|pin|password)\\b", "\\botp\\b.{0,25}\\b(share|send|bhejo|batao|batana)\\b", "\\b(otp|cvv|pin)\\b.{0,15}\\b(bhej|bata)\\w*"]},
+    {"category_id": "digital_arrest", "cue_group": "authority", "weight": 3, "patterns": ["\\b(cyber ?(crime|police|cell)|cbi|ed officer|enforcement directorate|narcotics|ncb|trai|supreme court|police (station|officer|inspector))\\b", "\\bmoney laundering\\b", "\\b(fir|case) (has been |is )?(registered|filed|lodged)\\b", "\\bdigital arrest\\b", "\\b(skype|video) (call )?verification\\b"]},
+    {"category_id": "digital_arrest", "cue_group": "threat", "weight": 3, "patterns": ["\\barrest (warrant|you)\\b", "\\bwarrant (will be |has been )?issued\\b", "\\byou (will|may) be arrested\\b", "\\bavoid (arrest|legal action)\\b", "\\blegal action\\b", "\\bnumber (will be |has been )?(blocked|disconnected|suspended)\\b"]},
+    {"category_id": "courier", "cue_group": "authority", "weight": 3, "patterns": ["\\b(customs|fedex|dhl|india post|bluedart|courier)\\b.{0,60}\\b(parcel|package|consignment|shipment)\\b", "\\b(parcel|package|consignment)\\b.{0,80}\\b(illegal|drugs|passport|narcotics|contraband|intercepted|seized|customs)\\b"]},
+    {"category_id": "courier", "cue_group": "threat", "weight": 3, "patterns": ["\\b(illegal items|contraband|seized|intercepted)\\b", "\\bparcel (is )?(held|stuck|on hold)\\b"]},
+    {"category_id": "kyc_bank", "cue_group": "threat", "weight": 3, "patterns": ["\\b(account|card|wallet|upi)\\b.{0,40}\\b(blocked|suspended|closed|frozen|deactivated)\\b", "\\bkyc\\b.{0,40}\\b(pending|expired|incomplete|update|verify|verification)\\b", "\\bpan (card )?(is )?(not linked|link)\\b", "\\bupdate (your )?(kyc|pan|aadhaar)\\b"]},
+    {"category_id": "utility_bill", "cue_group": "threat", "weight": 3, "patterns": ["\\b(power|electricity|gas|water) (supply )?(will be |is going to be )?(disconnected|cut|stopped|blocked)\\b", "\\b(electricity|power) bill\\b.{0,40}\\b(overdue|unpaid|pending)\\b", "\\bdisconnect(ed|ion)? tonight\\b"]},
+    {"category_id": "investment", "cue_group": "money", "weight": 2, "patterns": ["\\b(double|triple|10x) (your )?(money|investment)\\b", "\\bguaranteed (returns?|profit|income)\\b", "\\b(crypto|forex|stock|share market|trading)\\b.{0,50}\\b(returns?|profit|guaranteed|tips)\\b", "\\bdaily (profit|income|returns?)\\b", "\\bvip (group|tips|channel)\\b"]},
+    {"category_id": "job_lottery", "cue_group": "money", "weight": 2, "patterns": ["\\b(work|job) from home\\b", "\\bpart[- ]?time job\\b", "\\bearn (rs\\.?|inr|₹)? ?\\d[\\d,]*\\b", "\\b(lottery|lucky draw|prize|jackpot)\\b.{0,50}\\b(won|winner|claim|selected)\\b", "\\b(you have|you've) won\\b", "\\bcongratulations\\b.{0,60}\\b(won|prize|lottery|selected)\\b", "\\blike (youtube )?videos?\\b.{0,30}\\bearn\\b"]},
+    {"category_id": "job_lottery", "cue_group": "authority", "weight": 3, "patterns": ["\\b(pm|pradhan mantri|government|sarkari)\\b.{0,25}\\b(scheme|yojana|lottery|scholarship)\\b", "\\bkbc\\b", "\\bkaun banega crorepati\\b"]},
+    {"category_id": "loan_app", "cue_group": "money", "weight": 2, "patterns": ["\\b(instant|quick|easy) (personal )?loan\\b", "\\bloan (approved|sanctioned)\\b", "\\b(no|without) (documents?|paperwork|cibil)\\b", "\\bloan\\b.{0,40}\\b(in|within) \\d+ ?(minutes?|mins?)\\b", "\\bpay (processing|registration|insurance) fee\\b"]},
+    {"category_id": "family_emergency", "cue_group": "money", "weight": 2, "patterns": ["\\b(send|transfer|bhej|bhejo|pay)\\b.{0,30}\\b(money|upi|paise|amount|rs\\.?|₹)\\b", "\\b(upi|paise|money)\\b.{0,20}\\b(bhej|bhejo|transfer|send)\\w*", "\\b(hospital|accident|operation|surgery|police station)\\b.{0,80}\\b(money|upi|paise|rs\\.?|₹|\\d{4,})\\b", "\\bnew (number|phone)\\b.{0,40}\\b(money|upi|urgent|send)\\b"]},
+    {"category_id": "sextortion", "cue_group": "threat", "weight": 3, "patterns": ["\\b(video|call|chat) (recording|screenshot|clip)\\b.{0,80}\\b(upload|send|share|viral|post|contacts?)\\w*", "\\b(upload|send|post|viral)\\w*\\b.{0,60}\\b(your|private|intimate|nude)\\b.{0,30}\\b(video|photos?|pictures?)\\b", "\\bmake (it|this|you) viral\\b"]},
+    {"category_id": "sextortion", "cue_group": "money", "weight": 2, "patterns": ["\\bunless you pay\\b", "\\bpay (rs\\.?|inr|₹)? ?\\d[\\d,]*\\b.{0,30}\\b(now|immediately|or)\\b", "\\bdelete (the )?(video|photos?)\\b.{0,30}\\bpay\\b"]}
+  ],
+  "fallback": {
+    "generic": {
+      "scam_type": "No clear signs found",
+      "reasons": ["No known scam pattern matched this message.", "This quick check cannot confirm the message is trustworthy."],
+      "next_steps": ["Do not click unknown links or share OTP, PIN or passwords.", "Verify with the sender using an official number or app."]
+    },
+    "digital_arrest": {
+      "scam_type": "Digital arrest scam",
+      "reasons": ["Claims to be police or an agency and threatens arrest.", "Asks you to act urgently, often over a video call.", "Real agencies do not arrest people over video calls."],
+      "next_steps": ["Do not join the call or send any money.", "Disconnect and tell a trusted family member.", "Call 1930 or report at cybercrime.gov.in."]
+    },
+    "investment": {
+      "scam_type": "Fake investment scheme",
+      "reasons": ["Promises guaranteed or doubled returns.", "Pushes you to a Telegram or WhatsApp group.", "No genuine investment guarantees profit."],
+      "next_steps": ["Do not transfer money or share bank details.", "Check the firm on the SEBI website.", "If you paid, call 1930 immediately."]
+    },
+    "kyc_bank": {
+      "scam_type": "Fake KYC or bank alert",
+      "reasons": ["Threatens to block your account or card.", "Asks you to click a link to update KYC.", "Banks do not ask for KYC through links."],
+      "next_steps": ["Do not click the link or share OTP.", "Contact your bank using the number on your card.", "If money was lost, call 1930."]
+    },
+    "family_emergency": {
+      "scam_type": "Fake family emergency",
+      "reasons": ["Claims a relative needs urgent money.", "Asks you to send money by UPI to a new number.", "Scammers copy voices and names of relatives."],
+      "next_steps": ["Call the relative on their usual number first.", "Ask a question only they can answer.", "Do not send money until verified; call 1930 if you did."]
+    },
+    "courier": {
+      "scam_type": "Fake courier or customs scam",
+      "reasons": ["Says a parcel in your name has illegal items.", "Threatens arrest and asks you to call a number.", "Customs does not collect money by phone."],
+      "next_steps": ["Do not call back or pay any fee.", "Check the courier status on its official app.", "Report at 1930 if you shared details."]
+    },
+    "job_lottery": {
+      "scam_type": "Fake job or lottery offer",
+      "reasons": ["Promises easy earnings or an unexpected prize.", "Asks you to contact a number or pay a fee.", "Real prizes and jobs do not ask for payment first."],
+      "next_steps": ["Do not pay any fee or share documents.", "Verify the offer on the official website.", "If you paid, call 1930."]
+    },
+    "loan_app": {
+      "scam_type": "Loan app scam",
+      "reasons": ["Offers an instant loan with no paperwork.", "May ask for fees or app permissions first.", "Illegal loan apps harass borrowers later."],
+      "next_steps": ["Do not install unknown loan apps or pay upfront fees.", "Borrow only from RBI-registered lenders.", "Report harassment at 1930."]
+    },
+    "sextortion": {
+      "scam_type": "Sextortion threat",
+      "reasons": ["Threatens to share private videos or photos.", "Demands money to stop.", "Paying usually leads to more demands."],
+      "next_steps": ["Do not pay and do not reply.", "Save screenshots and block the sender.", "Call 1930 or report at cybercrime.gov.in."]
+    },
+    "otp_request": {
+      "scam_type": "OTP or credential theft",
+      "reasons": ["Asks you to share an OTP, PIN or password.", "No bank or company ever asks for these."],
+      "next_steps": ["Never share an OTP, PIN or CVV.", "If shared, call your bank and 1930 immediately."]
+    },
+    "utility_bill": {
+      "scam_type": "Fake utility bill threat",
+      "reasons": ["Threatens to cut power or gas tonight.", "Asks you to pay through a link or call a number.", "Utilities do not disconnect with a few hours notice."],
+      "next_steps": ["Do not click the link or call the number.", "Check your bill on the official app or website.", "If you paid, call 1930."]
+    }
+  }
+}
+
