@@ -1,0 +1,20 @@
+# Phase 1 Summary - Triage Core
+
+Connected to: [PHASE_0_SUMMARY.md](PHASE_0_SUMMARY.md), [Phase 1 Plan.md](../Phase%201%20Plan.md), [Build Plan.md](../Build%20Plan.md), [TRD.md](../TRD.md)
+
+## What Was Built
+1. **Normalizer and rule engine** ([normalize.py](../backend/app/normalize.py), [rules.py](../backend/app/rules.py), `backend/data/patterns_{mr,hi,en}.json`): weighted cue groups per scam category, matched across all three languages regardless of script. Output is `RuleResult {score, matched, top_category, floor, known_script}`. A known script needs at least 2 cue groups including `authority`, `money` or `threat`; floor is high for a known script, medium for 2 groups, else low. Negation guard keeps "never share OTP" warnings from firing. Rules-only baseline on the 40 messages: 38/40 (hi_04 and holdout hi_07 missed).
+2. **Gemini reasoning** ([llm.py](../backend/app/llm.py)): async `client.aio.interactions.create` with `store=False`, `thinking_level="low"`, JSON `response_format` from the flat `LlmOut` schema. One 8 s deadline covers the whole stage; one retry only after a schema-validation failure and only if time remains; timeouts, quota and network errors return `None` with no retry. The message is wrapped in `<message>` tags, embedded tags are stripped, and the system instruction treats it as untrusted data.
+3. **Fusion and fallback** ([fuse.py](../backend/app/fuse.py)): for a known script, final risk is `max(rule floor, model risk)`; otherwise the model risk. If the model lowers a known script, the static localized `scam_type` and `next_steps` replace the model's and a static reason is prepended. No model answer gives `mode: "quick"` with the floor risk and static text (generic text when the floor is low). `show_helpline` is true only for high.
+4. **API** ([routes/triage.py](../backend/app/routes/triage.py), [main.py](../backend/app/main.py), [errors.py](../backend/app/errors.py), [limiter.py](../backend/app/limiter.py)): `POST /api/triage`, `slowapi` limit from `RATE_LIMIT_PER_MIN`, localized `ErrorOut` for 422 (`text_too_long`, `invalid_input`), 429 and 500 using the `X-Lang` header, and an access log that adds `lang`, `risk`, `mode` and never any content.
+5. **Frontend** ([Check.tsx](../frontend/src/pages/Check.tsx), [ResultCard.tsx](../frontend/src/components/ResultCard.tsx), [LangToggle.tsx](../frontend/src/components/LangToggle.tsx), [PrivacyNotice.tsx](../frontend/src/components/PrivacyNotice.tsx), [api.ts](../frontend/src/lib/api.ts)): textarea with counter, loading state, localized errors, risk-coloured result card with a quick-check label, confidence bar and a tap-to-call 1930 button on high risk. App.tsx now only composes these.
+6. **Tests and eval**: `test_fuse.py`, `test_llm.py`, `test_triage_api.py` (rule floor, injection, retry then fallback, deadline, genuine OTP, localized 422/429, log privacy, no "safe" claims) and [testset/eval.py](../testset/eval.py) for the baseline with `--no-llm` and `--write` options.
+
+## Problems Faced and How They Were Solved
+- **Async SDK signature uncertain:** the docs search did not show the `aio` call shape. Inspected the installed `google-genai` 3.1.0: `client.aio.interactions.create` is a coroutine function. Kept the call isolated in `_generate` so tests replace it.
+- **Cue groups too narrow for the known-script rule:** account-block, power-cut and seized-parcel scams have no authority or money cue. Added a `threat` group to the known-script set.
+- **Model lowering a real scam:** a plain max would still show the model's "no signs" text under a High badge. Fusion swaps in static scam type and steps in that case.
+- **Branch drift:** the working tree was found on `main` mid-session; returned to `feat/triage-core` (uncommitted work carried over unchanged).
+
+## Not Run Yet
+`pytest`, `testset/eval.py` (needs the Gemini key and quota) and the phone-viewport check have not been run. Compile, import and `npm run build` checks passed. Gate 1 and `testset/baseline.md` stay open until you run them.
