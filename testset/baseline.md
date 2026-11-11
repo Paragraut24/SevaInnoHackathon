@@ -2,13 +2,12 @@
 
 | Slice | Correct | Accuracy |
 | --- | --- | --- |
-| overall | 38/40 | 95% |
+| overall | 40/40 | 100% |
 | mr | 14/14 | 100% |
-| hi | 11/13 | 85% |
+| hi | 13/13 | 100% |
 | en | 13/13 | 100% |
-| dev | 29/30 | 97% |
-| holdout | 9/10 | 90% |
+| dev | 30/30 | 100% |
+| holdout | 10/10 | 100% |
 
 Misses:
-- hi_04 label=scam risk=low mode=quick
-- hi_07 label=scam risk=low mode=quick
+- none

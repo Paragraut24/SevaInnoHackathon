@@ -85,5 +85,7 @@
   "dashboard_by_district": "By district",
   "dashboard_col_district": "District",
   "dashboard_col_reports": "Reports",
-  "dashboard_col_top": "Top type"
+  "dashboard_col_top": "Top type",
+  "read_aloud": "Listen (Read aloud)",
+  "read_aloud_stop": "Stop"
 }

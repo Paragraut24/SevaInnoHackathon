@@ -85,5 +85,7 @@
   "dashboard_by_district": "जिलेवार",
   "dashboard_col_district": "जिला",
   "dashboard_col_reports": "शिकायतें",
-  "dashboard_col_top": "मुख्य प्रकार"
+  "dashboard_col_top": "मुख्य प्रकार",
+  "read_aloud": "सुनें (आवाज)",
+  "read_aloud_stop": "रोकें"
 }

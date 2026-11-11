@@ -31,3 +31,39 @@ def test_limits_note_contains_no_forbidden_words():
     for word in FORBIDDEN:
         assert word not in LIMITS_NOTE.lower(), f"Forbidden word '{word}' found in limits_note"
 
+
+def test_media_check_unsupported_file_type(client):
+    res = client.post(
+        "/api/media-check",
+        files={"file": ("test.pdf", b"%PDF-1.4...", "application/pdf")},
+    )
+    assert res.status_code == 422
+    assert res.json()["error_code"] == "unsupported_file_type"
+
+
+def test_media_check_file_too_large(client, monkeypatch):
+    import app.routes.media_check as mc
+    # Mock max bytes to 10 bytes for test
+    monkeypatch.setattr(mc, "MAX_FILE_BYTES", 10)
+    res = client.post(
+        "/api/media-check",
+        files={"file": ("photo.jpg", b"0123456789extra", "image/jpeg")},
+    )
+    assert res.status_code == 422
+    assert res.json()["error_code"] == "file_too_large"
+
+
+def test_media_check_api_key_missing_fallback(client, monkeypatch):
+    from app.config import Settings
+    monkeypatch.setattr("app.media.get_settings", lambda: Settings(sightengine_api_user="", sightengine_api_secret=""))
+    res = client.post(
+        "/api/media-check",
+        files={"file": ("photo.jpg", b"\xff\xd8\xff\xe0testjpeg", "image/jpeg")},
+    )
+    assert res.status_code == 200
+    data = res.json()
+    assert data["band"] == "could_not_check"
+    assert data["reason"] == "api_key_missing"
+    assert "limits_note" in data
+
+

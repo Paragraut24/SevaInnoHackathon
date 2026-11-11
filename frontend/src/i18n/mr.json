@@ -85,5 +85,7 @@
   "dashboard_by_district": "जिल्हानिहाय",
   "dashboard_col_district": "जिल्हा",
   "dashboard_col_reports": "तक्रारी",
-  "dashboard_col_top": "मुख्य प्रकार"
+  "dashboard_col_top": "मुख्य प्रकार",
+  "read_aloud": "ऐका (आवाज)",
+  "read_aloud_stop": "थांबवा"
 }
