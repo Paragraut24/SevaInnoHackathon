@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+import { API_BASE } from "../lib/api";
 
 const BAND_STYLES = {
   unlikely: { card: "border-sky-200 bg-sky-50", label: "text-sky-900 bg-sky-100" },
