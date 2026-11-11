@@ -1,0 +1,40 @@
+{
+  "sample": true,
+  "generated_at": "2026-11-11",
+  "note": "Synthetic district-level data for demonstration. Not real incident data.",
+  "summary": {
+    "total_reports": 1247,
+    "resolved": 312,
+    "pending": 935,
+    "top_category": "digital_arrest"
+  },
+  "by_district": [
+    { "district": "Pune", "reports": 234, "top_category": "digital_arrest" },
+    { "district": "Mumbai", "reports": 198, "top_category": "investment" },
+    { "district": "Nashik", "reports": 143, "top_category": "kyc_bank" },
+    { "district": "Nagpur", "reports": 121, "top_category": "digital_arrest" },
+    { "district": "Aurangabad", "reports": 98, "top_category": "otp_request" },
+    { "district": "Solapur", "reports": 87, "top_category": "courier" },
+    { "district": "Kolhapur", "reports": 76, "top_category": "family_emergency" },
+    { "district": "Thane", "reports": 290, "top_category": "investment" }
+  ],
+  "by_category": [
+    { "category": "digital_arrest", "count": 389, "label": "Digital Arrest" },
+    { "category": "investment", "count": 287, "label": "Fake Investment" },
+    { "category": "kyc_bank", "count": 198, "label": "KYC / Bank" },
+    { "category": "otp_request", "count": 156, "label": "OTP Request" },
+    { "category": "courier", "count": 112, "label": "Courier Scam" },
+    { "category": "family_emergency", "count": 67, "label": "Family Emergency" },
+    { "category": "job_lottery", "count": 38, "label": "Job / Lottery" }
+  ],
+  "monthly_trend": [
+    { "month": "May", "reports": 134 },
+    { "month": "Jun", "reports": 156 },
+    { "month": "Jul", "reports": 178 },
+    { "month": "Aug", "reports": 203 },
+    { "month": "Sep", "reports": 219 },
+    { "month": "Oct", "reports": 247 },
+    { "month": "Nov", "reports": 110 }
+  ]
+}
+
