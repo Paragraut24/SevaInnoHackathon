@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     )
 
     gemini_api_key: str = ""
-    gemini_model: str = "gemini-3.8-flash"
+    gemini_model: str = "gemini-3.5-flash-lite"
     sightengine_api_user: str = ""
     sightengine_api_secret: str = ""
     hf_token: str = ""
