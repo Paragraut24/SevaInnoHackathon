@@ -1,0 +1,15 @@
+#!/bin/sh
+# Block pushing tracked .env files or accidental API keys.
+
+if git ls-files --error-unmatch .env >/dev/null 2>&1; then
+  echo "ERROR: .env is tracked by git. Untrack it before pushing."
+  exit 1
+fi
+
+if git grep -nE '(AIza[0-9A-Za-z_-]{20,}|GEMINI_API_KEY=[^[:space:]]+|SIGHTENGINE_API_SECRET=[^[:space:]]+|hf_[0-9A-Za-z]{20,})' -- ':!.env.example' ':!frontend/.env.example' ':!.githooks/pre-push' >/dev/null 2>&1; then
+  echo "ERROR: Potential secret detected in tracked files. Remove before pushing."
+  exit 1
+fi
+
+exit 0
+

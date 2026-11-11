@@ -1,0 +1,14 @@
+{
+  "app_name": "Sajag",
+  "tagline": "Verify before you trust",
+  "lang_label": "Language",
+  "privacy_title": "Privacy Notice",
+  "privacy_body": "Sajag stores nothing; text you check is sent to Google's Gemini API (Free Tier) for analysis.",
+  "privacy_ok": "Got it",
+  "placeholder_title": "Message & Link Triage (Phase 1 next)",
+  "placeholder_desc": "Phase 0 foundation is ready. Suspicious message, link, and phone-number triage lands in Phase 1.",
+  "helpline_label": "Emergency Cyber Helpline:",
+  "call_1930": "Call 1930",
+  "footer_disclaimer": "Independent civic project; not an official government service or legal advice."
+}
+

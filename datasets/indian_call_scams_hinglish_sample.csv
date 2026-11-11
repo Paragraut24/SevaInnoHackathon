@@ -1,0 +1,321 @@
+text,label,scam_category,caller_type,audio_duration,urgency_level,contains_blackmail,language_style
+"Hello ji Beta ghar aa gaya hoon, darwaza khol do.",0,none,family,34,low,False,hinglish
+Namaste ma'am Project ka review meeting kal 4 baje hai kya?,0,none,delivery_agent,54,low,False,hinglish
+"Ji namaskar Doctor appointment kal 9 baje hai, fasting rehna.",0,none,delivery_agent,47,low,False,hinglish
+"Madam ek minute Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,office_colleague,75,low,False,hinglish
+"Hello ma'am Papa train mein baith gaya hoon, safely pahunch jaunga.",0,none,delivery_agent,88,low,False,hinglish
+"Hello sir Papa train mein baith gaya hoon, safely pahunch jaunga.",0,none,friend,53,low,False,hinglish
+"Ji haan suniye Sir kal subah 10 baje meeting hai, agenda mail kar diya.",0,none,friend,25,low,False,hinglish
+"Namaste ma'am Doctor appointment kal 9 baje hai, fasting rehna.",0,none,doctor_clinic,57,low,False,hinglish
+"Namaste sir Doctor appointment kal 9 baje hai, fasting rehna.",0,none,family,65,low,False,hinglish
+"Ji namaskar Doctor appointment kal 9 baje hai, fasting rehna.",0,none,delivery_agent,67,low,False,hinglish
+"Hello ma'am Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,doctor_clinic,18,low,False,hinglish
+Hello ji Aapka order deliver ho chuka hai. Feedback de dena.,0,none,friend,52,low,False,hinglish
+"Hello ma'am Beta ghar aa gaya hoon, darwaza khol do.",0,none,delivery_agent,34,low,False,hinglish
+Namaste ma'am Project ka review meeting kal 4 baje hai kya?,0,none,friend,50,low,False,hinglish
+"Aap sun rahe hain na? Beta ghar aa gaya hoon, darwaza khol do.",0,none,office_colleague,82,low,False,hinglish
+"Sir ek minute suniye Doctor appointment kal 9 baje hai, fasting rehna.",0,none,delivery_agent,22,low,False,hinglish
+"Madam ek minute Sir kal subah 10 baje meeting hai, agenda mail kar diya.",0,none,delivery_agent,74,low,False,hinglish
+"Madam ek minute Sir kal subah 10 baje meeting hai, agenda mail kar diya.",0,none,office_colleague,64,low,False,hinglish
+"Aap sun rahe hain na? Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,friend,88,low,False,hinglish
+"Ji namaskar Papa train mein baith gaya hoon, safely pahunch jaunga.",0,none,delivery_agent,52,low,False,hinglish
+"Namaste sir Papa train mein baith gaya hoon, safely pahunch jaunga.",0,none,office_colleague,75,low,False,hinglish
+Hello ji Cab 3 minute mein pahunch raha hai.,0,none,doctor_clinic,28,low,False,hinglish
+"Hello ji Bhai aaj shaam ko milte hain, coffee pe baat karte hain.",0,none,delivery_agent,76,low,False,hinglish
+"Ji namaskar Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,friend,38,low,False,hinglish
+Dhyan se suniye Cab 3 minute mein pahunch raha hai.,0,none,office_colleague,87,low,False,hinglish
+Namaste sir Cab 3 minute mein pahunch raha hai.,0,none,office_colleague,28,low,False,hinglish
+"Madam ek minute Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,delivery_agent,90,low,False,hinglish
+"Sir ek minute suniye Beta ghar aa gaya hoon, darwaza khol do.",0,none,friend,18,low,False,hinglish
+"Namaste ma'am Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,doctor_clinic,60,low,False,hinglish
+"Hello ji Mummy main office pahunch gaya, aaj thoda late ho jaunga.",0,none,family,77,low,False,hinglish
+"Ji namaskar School fees ki last date kal hai, payment kar dena.",0,none,family,38,low,False,hinglish
+"Hello ma'am Doctor appointment kal 9 baje hai, fasting rehna.",0,none,family,67,low,False,hinglish
+"Aap sun rahe hain na? Papa train mein baith gaya hoon, safely pahunch jaunga.",0,none,doctor_clinic,33,low,False,hinglish
+"Madam ek minute School fees ki last date kal hai, payment kar dena.",0,none,doctor_clinic,53,low,False,hinglish
+Namaste ma'am Aapka order deliver ho chuka hai. Feedback de dena.,0,none,family,69,low,False,hinglish
+"Namaste ma'am School fees ki last date kal hai, payment kar dena.",0,none,doctor_clinic,60,low,False,hinglish
+"Hello sir Bhai aaj shaam ko milte hain, coffee pe baat karte hain.",0,none,friend,21,low,False,hinglish
+"Ji haan suniye Papa train mein baith gaya hoon, safely pahunch jaunga.",0,none,friend,33,low,False,hinglish
+Namaste sir Cab 3 minute mein pahunch raha hai.,0,none,delivery_agent,40,low,False,hinglish
+"Hello sir Beta ghar aa gaya hoon, darwaza khol do.",0,none,doctor_clinic,82,low,False,hinglish
+Ji namaskar Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,92,medium,False,hinglish
+Hello ji Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,88,medium,False,hinglish
+"ACP Sharma bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,71,medium,False,hinglish
+Namaste ma'am Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,127,medium,False,hinglish
+"National Cyber Cell se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,120,medium,False,hinglish
+Crime Branch se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,109,medium,False,hinglish
+Namaste ma'am Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,82,medium,False,hinglish
+"CBI se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,82,medium,False,hinglish
+Crime Branch se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,122,medium,False,hinglish
+Hello sir Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,103,medium,False,hinglish
+Namaste ma'am Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,60,medium,False,hinglish
+Ji haan suniye Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,95,medium,False,hinglish
+Hello ma'am Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,114,medium,False,hinglish
+"Sir ek minute suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,90,medium,False,hinglish
+"Namaste sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,107,medium,False,hinglish
+Law enforcement se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,55,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,88,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,relative,other_scammer,69,medium,False,hinglish
+Aap sun rahe hain na? Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,relative,other_scammer,66,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,relative,other_scammer,111,medium,False,hinglish
+Ji haan suniye Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,relative,other_scammer,77,medium,False,hinglish
+"Police headquarters se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,76,medium,False,hinglish
+"ACP Sharma bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,55,medium,False,hinglish
+"Ji namaskar Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,72,medium,False,hinglish
+"Police headquarters se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,91,medium,False,hinglish
+Inspector Rajesh Kumar bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,relative,other_scammer,112,medium,False,hinglish
+Special Investigation Team se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,133,medium,False,hinglish
+"Inspector Rajesh Kumar bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,126,medium,False,hinglish
+Police headquarters se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,79,medium,False,hinglish
+Ji namaskar Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,70,medium,False,hinglish
+"Hello sir Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,81,medium,False,hinglish
+Hello ma'am Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,106,medium,False,hinglish
+"Aap sun rahe hain na? Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,63,medium,False,hinglish
+Hello ji Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,63,medium,False,hinglish
+Ji haan suniye Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,relative,other_scammer,92,medium,False,hinglish
+Special Investigation Team se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,relative,other_scammer,126,medium,False,hinglish
+"National Cyber Cell se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,147,medium,False,hinglish
+"Dhyan se suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,relative,other_scammer,60,medium,False,hinglish
+Ji namaskar Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,relative,other_scammer,63,medium,False,hinglish
+"Namaste sir Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,relative,other_scammer,69,medium,False,hinglish
+"Special Investigation Team se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,74,medium,False,hinglish
+"Police headquarters se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,154,medium,False,hinglish
+"Ji namaskar Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,162,medium,False,hinglish
+Inspector Rajesh Kumar bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,136,medium,False,hinglish
+Sir ek minute suniye Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,68,medium,False,hinglish
+Sir ek minute suniye Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,82,medium,False,hinglish
+"Police headquarters se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,bank_kyc,bank_scammer,99,medium,False,hinglish
+Cyber Crime Department se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,107,medium,False,hinglish
+Sir ek minute suniye Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,123,medium,False,hinglish
+Madam ek minute Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,83,medium,False,hinglish
+Namaste ma'am Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,90,medium,False,hinglish
+Sir ek minute suniye Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,123,medium,False,hinglish
+"Police headquarters se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,bank_kyc,bank_scammer,168,medium,False,hinglish
+Police headquarters se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,76,medium,False,hinglish
+ACP Sharma bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,155,medium,False,hinglish
+CBI se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,95,medium,False,hinglish
+Hello ji Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,102,medium,False,hinglish
+Dhyan se suniye Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,146,medium,False,hinglish
+Madam ek minute Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,69,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,157,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,95,medium,False,hinglish
+Namaste sir Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,117,medium,False,hinglish
+Aap sun rahe hain na? Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,161,medium,False,hinglish
+"Inspector Rajesh Kumar bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,bank_kyc,bank_scammer,91,medium,False,hinglish
+Hello ji Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,109,medium,False,hinglish
+Dhyan se suniye Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,119,medium,False,hinglish
+Hello sir Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,119,medium,False,hinglish
+Namaste sir Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,136,medium,False,hinglish
+"Aap sun rahe hain na? Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,135,medium,False,hinglish
+Hello ji Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,bank_kyc,bank_scammer,105,medium,False,hinglish
+Ji namaskar Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,114,medium,False,hinglish
+Police headquarters se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,106,medium,False,hinglish
+"Ji namaskar Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,146,medium,False,hinglish
+ACP Sharma bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,152,medium,False,hinglish
+Hello ji Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,84,medium,False,hinglish
+ACP Sharma bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,bank_kyc,bank_scammer,79,medium,False,hinglish
+"Namaste ma'am Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,bank_kyc,bank_scammer,152,medium,False,hinglish
+"Crime Branch se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,119,medium,False,hinglish
+"Namaste sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,bank_kyc,bank_scammer,97,medium,False,hinglish
+Ji namaskar Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,bank_kyc,bank_scammer,154,medium,False,hinglish
+"Delhi Police se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,143,medium,False,hinglish
+"Hello sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,84,medium,False,hinglish
+Hello sir Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,114,medium,False,hinglish
+Namaste ma'am Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,102,medium,False,hinglish
+"Police headquarters se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,101,medium,False,hinglish
+"Dhyan se suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,139,medium,False,hinglish
+Madam ek minute Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,145,medium,False,hinglish
+Hello ma'am Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,101,medium,False,hinglish
+"Crime Branch se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,80,medium,False,hinglish
+"Aap sun rahe hain na? Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,111,medium,False,hinglish
+"Hello ji Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,123,medium,False,hinglish
+"Ji namaskar Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,75,medium,False,hinglish
+"Sir ek minute suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,113,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,amazon,other_scammer,92,medium,False,hinglish
+Dhyan se suniye Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,116,medium,False,hinglish
+"Crime Branch se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,77,medium,False,hinglish
+Aap sun rahe hain na? Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,amazon,other_scammer,105,medium,False,hinglish
+"Hello ji Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,98,medium,False,hinglish
+"Hello sir Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,73,medium,False,hinglish
+Hello ma'am Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,amazon,other_scammer,65,medium,False,hinglish
+"ACP Sharma bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,93,medium,False,hinglish
+Namaste sir Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,amazon,other_scammer,60,medium,False,hinglish
+"Madam ek minute Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,79,medium,False,hinglish
+"Madam ek minute Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,68,medium,False,hinglish
+"Aap sun rahe hain na? Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,amazon,other_scammer,58,medium,False,hinglish
+"Inspector Rajesh Kumar bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,143,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,70,medium,False,hinglish
+Ji haan suniye Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,77,medium,False,hinglish
+Special Investigation Team se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,110,medium,False,hinglish
+Dhyan se suniye Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,amazon,other_scammer,85,medium,False,hinglish
+Namaste sir Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,141,medium,False,hinglish
+Aap sun rahe hain na? Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,110,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,145,medium,False,hinglish
+Ji namaskar Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,amazon,other_scammer,56,medium,False,hinglish
+"Delhi Police se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,112,medium,False,hinglish
+Dhyan se suniye Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,64,medium,False,hinglish
+"CBI se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,94,medium,False,hinglish
+"Inspector Rajesh Kumar bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,72,medium,False,hinglish
+Law enforcement se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,amazon,other_scammer,67,medium,False,hinglish
+"Sir ek minute suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,amazon,other_scammer,70,medium,False,hinglish
+Ji namaskar Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,93,high,True,hinglish
+Dhyan se suniye Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,249,high,True,hinglish
+CBI se bol raha hoon. Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,139,high,True,hinglish
+Ji namaskar Aapke phone se illegal obscene content circulate ho raha hai. Digital arrest ho sakta hai.,1,police_blackmail,police_impersonator,175,high,True,hinglish
+ACP Sharma bol raha hoon. Aapke phone se illegal obscene content circulate ho raha hai. Digital arrest ho sakta hai.,1,police_blackmail,police_impersonator,160,high,True,hinglish
+National Cyber Cell se bol raha hoon. Aapki morphed photos viral ho rahi hain. Cyber cell ne case register kar liya hai.,1,police_blackmail,police_impersonator,137,high,True,hinglish
+Madam ek minute Aapki morphed photos viral ho rahi hain. Cyber cell ne case register kar liya hai.,1,police_blackmail,police_impersonator,250,high,True,hinglish
+Law enforcement se bol raha hoon. Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,188,high,True,hinglish
+Delhi Police se bol raha hoon. Aapke number se pornographic material WhatsApp groups mein bheja ja raha hai. FIR ho chuki hai.,1,police_blackmail,police_impersonator,251,high,True,hinglish
+Ji haan suniye Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,149,high,True,hinglish
+Namaste sir Aapki morphed photos viral ho rahi hain. Cyber cell ne case register kar liya hai.,1,police_blackmail,police_impersonator,194,high,True,hinglish
+Hello ji Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,221,high,True,hinglish
+Law enforcement se bol raha hoon. Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,98,high,True,hinglish
+National Cyber Cell se bol raha hoon. Aapke number se pornographic material WhatsApp groups mein bheja ja raha hai. FIR ho chuki hai.,1,police_blackmail,police_impersonator,180,high,True,hinglish
+Law enforcement se bol raha hoon. Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,229,high,True,hinglish
+Special Investigation Team se bol raha hoon. Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,129,high,True,hinglish
+Hello ji Aapke phone se illegal obscene content circulate ho raha hai. Digital arrest ho sakta hai.,1,police_blackmail,police_impersonator,160,high,True,hinglish
+Hello ji Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,249,high,True,hinglish
+Crime Branch se bol raha hoon. Aapke number se pornographic material WhatsApp groups mein bheja ja raha hai. FIR ho chuki hai.,1,police_blackmail,police_impersonator,233,high,True,hinglish
+Inspector Rajesh Kumar bol raha hoon. Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,158,high,True,hinglish
+Madam ek minute Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,96,high,True,hinglish
+Hello ji Aapke number se pornographic material WhatsApp groups mein bheja ja raha hai. FIR ho chuki hai.,1,police_blackmail,police_impersonator,168,high,True,hinglish
+Ji haan suniye Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,152,high,True,hinglish
+Cyber Crime Department se bol raha hoon. Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,117,high,True,hinglish
+Hello sir Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,151,high,True,hinglish
+Law enforcement se bol raha hoon. Aapke number se pornographic material WhatsApp groups mein bheja ja raha hai. FIR ho chuki hai.,1,police_blackmail,police_impersonator,95,high,True,hinglish
+Madam ek minute Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,253,high,True,hinglish
+National Cyber Cell se bol raha hoon. Aapki morphed photos viral ho rahi hain. Cyber cell ne case register kar liya hai.,1,police_blackmail,police_impersonator,212,high,True,hinglish
+Ji namaskar Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,256,high,True,hinglish
+Hello ma'am Aapki morphed photos viral ho rahi hain. Cyber cell ne case register kar liya hai.,1,police_blackmail,police_impersonator,153,high,True,hinglish
+Ji namaskar Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,250,high,True,hinglish
+Police headquarters se bol raha hoon. Aapke phone se illegal obscene content circulate ho raha hai. Digital arrest ho sakta hai.,1,police_blackmail,police_impersonator,185,high,True,hinglish
+Aap sun rahe hain na? Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,234,high,True,hinglish
+Law enforcement se bol raha hoon. Aapke number se pornographic material WhatsApp groups mein bheja ja raha hai. FIR ho chuki hai.,1,police_blackmail,police_impersonator,151,high,True,hinglish
+Namaste ma'am Ek gang aapke number ka misuse karke gande videos bana raha hai. Turant verify karna hoga.,1,police_blackmail,police_impersonator,230,high,True,hinglish
+Cyber Crime Department se bol raha hoon. Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,111,high,True,hinglish
+Delhi Police se bol raha hoon. Aapke phone se illegal obscene content circulate ho raha hai. Digital arrest ho sakta hai.,1,police_blackmail,police_impersonator,162,high,True,hinglish
+Namaste ma'am Aapke WhatsApp se ladies ko asleel messages bheje ja rahe hain. Aapko suspect maana ja raha hai.,1,police_blackmail,police_impersonator,258,high,True,hinglish
+Namaste sir Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,156,high,True,hinglish
+Dhyan se suniye Aapke phone number se koi asleel gande images aur videos share kiye ja rahe hain. Ye cyber crime hai.,1,police_blackmail,police_impersonator,153,high,True,hinglish
+"Ji haan suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,65,medium,False,hinglish
+Ji namaskar Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,aadhaar,other_scammer,62,medium,False,hinglish
+"Ji haan suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,77,medium,False,hinglish
+Madam ek minute Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,108,medium,False,hinglish
+"Crime Branch se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,114,medium,False,hinglish
+Police headquarters se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,aadhaar,other_scammer,73,medium,False,hinglish
+"Aap sun rahe hain na? Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,146,medium,False,hinglish
+Namaste ma'am Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,aadhaar,other_scammer,146,medium,False,hinglish
+"Madam ek minute Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,94,medium,False,hinglish
+Ji namaskar Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,90,medium,False,hinglish
+"ACP Sharma bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,81,medium,False,hinglish
+Aap sun rahe hain na? Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,98,medium,False,hinglish
+Police headquarters se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,aadhaar,other_scammer,76,medium,False,hinglish
+"Dhyan se suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,74,medium,False,hinglish
+"Special Investigation Team se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,76,medium,False,hinglish
+Dhyan se suniye Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,aadhaar,other_scammer,148,medium,False,hinglish
+Hello ma'am Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,131,medium,False,hinglish
+Crime Branch se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,aadhaar,other_scammer,58,medium,False,hinglish
+"Hello sir Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,146,medium,False,hinglish
+CBI se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,129,medium,False,hinglish
+"Namaste sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,73,medium,False,hinglish
+"Hello ji Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,94,medium,False,hinglish
+Law enforcement se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,aadhaar,other_scammer,94,medium,False,hinglish
+"Sir ek minute suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,92,medium,False,hinglish
+Namaste sir Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,aadhaar,other_scammer,119,medium,False,hinglish
+"Aap sun rahe hain na? Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,150,medium,False,hinglish
+Hello sir Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,aadhaar,other_scammer,129,medium,False,hinglish
+Hello ma'am Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,aadhaar,other_scammer,104,medium,False,hinglish
+"Delhi Police se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,105,medium,False,hinglish
+"Inspector Rajesh Kumar bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,138,medium,False,hinglish
+"Sir ek minute suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,aadhaar,other_scammer,57,medium,False,hinglish
+Ji namaskar Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,100,medium,False,hinglish
+"Sir ek minute suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,87,medium,False,hinglish
+"Delhi Police se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,121,medium,False,hinglish
+"Delhi Police se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,58,medium,False,hinglish
+"Police headquarters se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,113,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,aadhaar,other_scammer,57,medium,False,hinglish
+"Inspector Rajesh Kumar bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,90,medium,False,hinglish
+Hello ji Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,aadhaar,other_scammer,134,medium,False,hinglish
+"Ji namaskar Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,aadhaar,other_scammer,112,medium,False,hinglish
+Aap sun rahe hain na? Aapke Aadhaar card ka istemal karke fake SIM issue ki gayi hai.,1,police_digital_arrest,police_impersonator,235,medium,False,hinglish
+Hello sir Police verification complete karna zaroori hai.,1,police_digital_arrest,police_impersonator,177,medium,False,hinglish
+Namaste ma'am Aapke khilaaf legal action initiate kiya gaya hai.,1,police_digital_arrest,police_impersonator,195,medium,False,hinglish
+Sir ek minute suniye Cyber Crime Department se bol raha hoon. Aapke number se objectionable content circulate hua hai.,1,police_digital_arrest,police_impersonator,102,high,False,hinglish
+Dhyan se suniye Aapke naam par ek criminal complaint register hui hai.,1,police_digital_arrest,police_impersonator,216,medium,False,hinglish
+Madam ek minute Cyber investigation team ko aapke number se suspicious activity mili hai.,1,police_digital_arrest,police_impersonator,210,high,False,hinglish
+Namaste ma'am National Cyber Cell se bol raha hoon. Verification ke liye cooperate kijiye.,1,police_digital_arrest,police_impersonator,191,high,False,hinglish
+Madam ek minute Aapke Aadhaar card ka istemal karke fake SIM issue ki gayi hai.,1,police_digital_arrest,police_impersonator,258,high,False,hinglish
+Hello ma'am Aapke khilaaf legal action initiate kiya gaya hai.,1,police_digital_arrest,police_impersonator,260,medium,False,hinglish
+Namaste sir Aapka mobile number cyber fraud investigation mein aaya hai.,1,police_digital_arrest,police_impersonator,152,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapke Aadhaar card ka istemal karke fake SIM issue ki gayi hai.,1,police_digital_arrest,police_impersonator,241,high,False,hinglish
+Special Investigation Team se bol raha hoon. Aapka mobile number cyber fraud investigation mein aaya hai.,1,police_digital_arrest,police_impersonator,108,high,False,hinglish
+National Cyber Cell se bol raha hoon. Aapke naam par registered account illegal activities mein use hua hai.,1,police_digital_arrest,police_impersonator,155,medium,False,hinglish
+Ji haan suniye Cyber Crime Department se bol raha hoon. Aapke number se objectionable content circulate hua hai.,1,police_digital_arrest,police_impersonator,236,high,False,hinglish
+Delhi Police se bol raha hoon. Aapke naam par money laundering case register hua hai.,1,police_digital_arrest,police_impersonator,123,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Aapke naam par ek criminal complaint register hui hai.,1,police_digital_arrest,police_impersonator,145,high,False,hinglish
+Law enforcement se bol raha hoon. Aapka mobile number cyber fraud investigation mein aaya hai.,1,police_digital_arrest,police_impersonator,123,high,False,hinglish
+Namaste sir Cyber investigation team ko aapke number se suspicious activity mili hai.,1,police_digital_arrest,police_impersonator,172,medium,False,hinglish
+Crime Branch se bol raha hoon. Aapka number telecom fraud case mein identify hua hai.,1,police_digital_arrest,police_impersonator,164,medium,False,hinglish
+Ji namaskar Aapka mobile number cyber fraud investigation mein aaya hai.,1,police_digital_arrest,police_impersonator,241,medium,False,hinglish
+CBI se bol raha hoon. Aapke Aadhaar se linked account par complaint mili hai.,1,police_digital_arrest,police_impersonator,160,high,False,hinglish
+Madam ek minute Aapke documents ka misuse karke financial fraud kiya gaya hai.,1,police_digital_arrest,police_impersonator,231,medium,False,hinglish
+Hello ma'am Aapke Aadhaar se linked account par complaint mili hai.,1,police_digital_arrest,police_impersonator,168,medium,False,hinglish
+Ji haan suniye Cyber Crime Department se bol raha hoon. Aapke number se objectionable content circulate hua hai.,1,police_digital_arrest,police_impersonator,118,high,False,hinglish
+Special Investigation Team se bol raha hoon. Aapka bank account investigation ke dauran freeze kiya ja sakta hai.,1,police_digital_arrest,police_impersonator,192,medium,False,hinglish
+Sir ek minute suniye Aapke naam par money laundering case register hua hai.,1,police_digital_arrest,police_impersonator,154,high,False,hinglish
+Law enforcement se bol raha hoon. Aapke naam par registered SIM ka misuse report hua hai.,1,police_digital_arrest,police_impersonator,211,high,False,hinglish
+Police headquarters se bol raha hoon. Cyber Crime Department se bol raha hoon. Aapke number se objectionable content circulate hua hai.,1,police_digital_arrest,police_impersonator,149,medium,False,hinglish
+Delhi Police se bol raha hoon. Police verification complete karna zaroori hai.,1,police_digital_arrest,police_impersonator,192,high,False,hinglish
+Hello ma'am National Cyber Cell se bol raha hoon. Verification ke liye cooperate kijiye.,1,police_digital_arrest,police_impersonator,244,high,False,hinglish
+Aap sun rahe hain na? Crime Branch se bol raha hoon. Aapke account se suspicious transactions hui hain.,1,police_digital_arrest,police_impersonator,162,high,False,hinglish
+Aap sun rahe hain na? Crime Branch se bol raha hoon. Aapke account se suspicious transactions hui hain.,1,police_digital_arrest,police_impersonator,217,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapke naam par money laundering case register hua hai.,1,police_digital_arrest,police_impersonator,128,high,False,hinglish
+Cyber Crime Department se bol raha hoon. Aapke documents ka misuse karke financial fraud kiya gaya hai.,1,police_digital_arrest,police_impersonator,156,medium,False,hinglish
+Dhyan se suniye Aapka number telecom fraud case mein identify hua hai.,1,police_digital_arrest,police_impersonator,205,high,False,hinglish
+National Cyber Cell se bol raha hoon. Aapke Aadhaar se linked account par complaint mili hai.,1,police_digital_arrest,police_impersonator,251,high,False,hinglish
+Hello ji Police verification complete karna zaroori hai.,1,police_digital_arrest,police_impersonator,224,high,False,hinglish
+Aap sun rahe hain na? Aapke khilaaf legal action initiate kiya gaya hai.,1,police_digital_arrest,police_impersonator,102,medium,False,hinglish
+Aap sun rahe hain na? Aapko investigation officer se turant baat karni hogi.,1,police_digital_arrest,police_impersonator,102,medium,False,hinglish
+Police headquarters se bol raha hoon. Aapko investigation officer se turant baat karni hogi.,1,police_digital_arrest,police_impersonator,251,medium,False,hinglish
+Cyber Crime Department se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,123,medium,False,hinglish
+"Hello sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,112,medium,False,hinglish
+"Special Investigation Team se bol raha hoon. Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,lottery,other_scammer,68,medium,False,hinglish
+Ji namaskar Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,103,medium,False,hinglish
+Madam ek minute Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,77,medium,False,hinglish
+Hello ji Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,86,medium,False,hinglish
+"Aap sun rahe hain na? Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,102,medium,False,hinglish
+ACP Sharma bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,76,medium,False,hinglish
+"Namaste sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,145,medium,False,hinglish
+Hello ji Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,123,medium,False,hinglish
+"Sir ek minute suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,150,medium,False,hinglish
+"Namaste ma'am Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,141,medium,False,hinglish
+"Madam ek minute Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,lottery,other_scammer,60,medium,False,hinglish
+"Ji namaskar Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,120,medium,False,hinglish
+Madam ek minute Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,108,medium,False,hinglish
+"Sir ek minute suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,lottery,other_scammer,80,medium,False,hinglish
+"Sir ek minute suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,lottery,other_scammer,71,medium,False,hinglish
+Sir ek minute suniye Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,149,medium,False,hinglish
+Namaste ma'am Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,lottery,other_scammer,104,medium,False,hinglish
+"Dhyan se suniye Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,135,medium,False,hinglish
+National Cyber Cell se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,lottery,other_scammer,134,medium,False,hinglish
+Hello ji Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,147,medium,False,hinglish
+Special Investigation Team se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,lottery,other_scammer,57,medium,False,hinglish
+"CBI se bol raha hoon. Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,143,medium,False,hinglish
+"Namaste sir Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,75,medium,False,hinglish
+"Ji namaskar Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,127,medium,False,hinglish
+"Dhyan se suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,lottery,other_scammer,134,medium,False,hinglish
+Hello ma'am Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,lottery,other_scammer,71,medium,False,hinglish
+Cyber Crime Department se bol raha hoon. Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,111,medium,False,hinglish
+"Hello ma'am Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,63,medium,False,hinglish
+Ji haan suniye Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,139,medium,False,hinglish
+Aap sun rahe hain na? Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,82,medium,False,hinglish
+Madam ek minute Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,lottery,other_scammer,79,medium,False,hinglish
+"Ji haan suniye Aapke father ko accident ho gaya hai. Turant 50,000 bhej dijiye hospital ke liye.",1,lottery,other_scammer,110,medium,False,hinglish
+Dhyan se suniye Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,102,medium,False,hinglish
+"Hello ma'am Amazon se bol raha hoon. Aapka parcel hold hai, clearance charge ₹499 dena hoga.",1,lottery,other_scammer,59,medium,False,hinglish
+Hello sir Aapka Aadhaar deactivate hone wala hai. Turant update kijiye.,1,lottery,other_scammer,106,medium,False,hinglish
+Delhi Police se bol raha hoon. Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,73,medium,False,hinglish
+Crime Branch se bol raha hoon. Congratulations! Aapne ₹40 lakh ka lottery jeeta hai. Processing fee dena hoga.,1,lottery,other_scammer,60,medium,False,hinglish
+Madam ek minute Aapka KYC pending hai. Account 2 ghante mein block ho jayega. OTP share kijiye.,1,lottery,other_scammer,115,medium,False,hinglish
