@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     sightengine_api_user: str = ""
     sightengine_api_secret: str = ""
     hf_token: str = ""
-    allowed_origin: str = "http://localhost:5173"
+    allowed_origin: str = "http://localhost:5173,https://seva-inno-hackathon-project.vercel.app"
     rate_limit_per_min: int = 20
 
     @property

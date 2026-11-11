@@ -2,6 +2,13 @@
 
 **Verify before you trust.**
 
+[![Live Web App](https://img.shields.io/badge/Live_PWA-Vercel-black?style=for-the-badge&logo=vercel)](https://seva-inno-hackathon-project.vercel.app)
+[![API Status](https://img.shields.io/badge/Backend_API-Render-46E3B7?style=for-the-badge&logo=render)](https://sajag-api-xqj5.onrender.com/api/health)
+
+- **Live Web Application:** [https://seva-inno-hackathon-project.vercel.app](https://seva-inno-hackathon-project.vercel.app)
+- **Live Backend API:** [https://sajag-api-xqj5.onrender.com](https://sajag-api-xqj5.onrender.com)
+- **API Health Check:** [https://sajag-api-xqj5.onrender.com/api/health](https://sajag-api-xqj5.onrender.com/api/health)
+
 Sajag is a multilingual, privacy-first web application (PWA) and stateless API designed to help citizens in Maharashtra and across India verify suspicious messages, links, phone numbers, and media before acting on them. Output is localized in **Marathi** (default), **Hindi**, and **English**.
 
 Built for the **Seva First Innovation Challenge Maharashtra** (Emerging Technologies: Responsible AI, deepfake detection, cyber resilience, and digital trust).
