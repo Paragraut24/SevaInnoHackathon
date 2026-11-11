@@ -21,7 +21,7 @@ Tests planned: see Test plan below
 | # | Decision | Choice | Why | Revisit if |
 | --- | --- | --- | --- | --- |
 | D1 | Gemini API surface | `client.interactions.create` (Interactions API), `google-genai` SDK | Required by project rules; current SDK | SDK call shape differs from docs in Phase 0 smoke test |
-| D2 | Model | `GEMINI_MODEL` defaults to `gemini-3.8-flash` (latest strong Flash model, Free Tier available) | Best Marathi reasoning quality + 6 s p95 speed; confirmed Free Tier (`Used to improve our products: Yes`) | Free-tier RPM/RPD throttles during judging (fallback env switch to `gemini-3.1-flash-lite`) |
+| D2 | Model | `GEMINI_MODEL` defaults to `gemini-3.5-flash-lite` (verified ~2.3 s Marathi JSON on Free Tier) | Full `3.x-flash` models timed out (>10–25 s) on Interactions API Free Tier; `3.5-flash-lite` keeps p95 well under 6 s with clean Marathi output | Paid tier or faster routing enables `gemini-3.8-flash` (env swap only) |
 | D3 | Structured output | `response_format={"type":"text","mime_type":"application/json","schema": LlmOut.model_json_schema()}`, then `model_validate_json(interaction.output_text)` | Pattern from the Gemini getting-started guide; Pydantic is already the schema layer | Schema features unsupported by the model (keep schema flat) |
 | D4 | What the LLM returns vs what the server owns | LLM returns only `{risk, scam_type, reasons[<=3], next_steps[<=3], confidence}`. Server sets `lang`, `mode`, and the 1930 hint | Smaller output = lower latency and fewer validation failures; server controls anything safety-critical | Never |
 | D5 | Rules vs LLM authority | Rules set a risk floor; LLM can raise but never lower when a known script matches | Honest-by-design; blocks prompt injection from downgrading a real scam | Eval shows the floor causes more than 3 false alarms |
@@ -124,7 +124,7 @@ Test plan:
 | Phase overruns | Cut the confidence bar and read-aloud first; never cut the rule floor or the fallback |
 
 ## Locked inputs (Phase 1)
-1. **Model:** `gemini-3.8-flash` as default (`thinking_level="low"`, no `temperature`). Confirmed Free Tier available in Gemini pricing docs (note: Free Tier prompts may be used to improve Google products — reflect honestly in `PrivacyNotice`).
+1. **Model:** `gemini-3.5-flash-lite` as default (`thinking_level="low"`, no `temperature`), verified in Phase 0.4 (~2.3 s Marathi JSON; `gemini-3.8-flash`/`3.7`/`3.6`/`3.5-flash` timed out >10–25 s on Free Tier; `2.5-flash`/`gemini-flash-latest` returned 404). Free Tier allows Google to use inputs to improve products — reflected honestly in `PrivacyNotice`.
 2. **1930 helpline button:** Clickable `<a href="tel:1930">` call button plus visible text fallback.
 3. **Default language & Marathi data:** Marathi (`mr`) stays default. Seed rules & `testset/messages.csv` from Maharashtra Cyber / Mahavitaran Marathi police advisories (Loksatta, eSakal, TV9 Marathi) and open datasets (`dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset`, `bolewara/hinglish-scam-text-dataset`, `chinna887/Indian_Cyber_Scam_PhoneCall_Hinglish_Dataset`, `junioralive/india-spam-sms-classification`).
 
