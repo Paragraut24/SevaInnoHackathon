@@ -22,7 +22,7 @@ services:
       - key: HF_TOKEN
         sync: false
       - key: HF_MODEL_REPO
-        sync: false
+        value: Parag28/sajag-scam-classifier
       - key: ML_ENABLED
         value: "true"
       - key: ALLOWED_ORIGIN
