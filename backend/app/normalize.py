@@ -41,6 +41,7 @@ def preprocess_for_ml(s: str) -> str:
     text = normalize_text(s)
     text = URL_RE.sub(_replace_url, text)
     text = PHONE_RE.sub(PHONE_MASK_TOKEN, text)
+    text = text.replace("[url]", URL_MASK_TOKEN).replace("[phone]", PHONE_MASK_TOKEN)
     return " ".join(text.split())
 
 

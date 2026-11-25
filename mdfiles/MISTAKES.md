@@ -26,3 +26,11 @@
 **Context:** Phase B `backend/scripts/prepare_dataset.py` Gate B validation after integrating `app.normalize.preprocess_for_ml`.
 **Solution:** Added deterministic per-language ham downsampling (`HAM_MAX_RATIO_TO_SCAM = 1.08`, yielding `48.1%` scam across 3,632 unique rows) and kept `PHONE_RE` (`[6-9]\d{9}`) as the phone-leak assertion while logging non-mobile 10-digit rows (`32`) in `metadata.json`.
 **Date:** 2026-11-25
+
+
+
+### `preprocess_for_ml` lowercased existing `[URL]`/`[PHONE]` tokens and un-preprocessed INT8 ONNX collapsed BERT parity
+**Problem:** Running `preprocess_for_ml()` on already-masked CSV rows (`test.csv`) lowercased `[URL]` and `[PHONE]` into `[url]` and `[phone]`, breaking cased single-token IDs (`0.9807` vs `0.9904` F1); separately in Colab, `transformers 5.22.1` removed `warmup_ratio` and plain `quantize_dynamic(..., QUInt8)` collapsed INT8 parity to `68%` (`google/muril-base-cased` INT8 also stayed at `227.26 MB` >= `150 MB`).
+**Context:** Colab T4 ONNX export/quantization (`backend/scripts/train_classifier.ipynb`) and local `backend/scripts/evaluate_classifier.py` against `backend/app/normalize.py`.
+**Solution:** Preserved uppercase `[URL]`/`[PHONE]` placeholders in `preprocess_for_ml()` for idempotency, updated the notebook to `distilbert-base-multilingual-cased` with `warmup_steps=40`, `quant_pre_process(..., skip_symbolic_shape=True)`, and per-channel `QuantType.QInt8` (`129.59 MB`, `100%` INT8 parity, `0.9904` F1), and monkeypatched `app.main.load_classifier` in `test_health_reports_ml_model_loaded_and_unavailable`.
+**Date:** 2026-11-25

@@ -166,12 +166,17 @@ def test_preprocess_for_ml_parity_with_prepare_dataset():
         "तुमचे खाते अपडेट करण्यासाठी +919123456789 वर संपर्क साधा.",
     ]
     for s in samples:
-        assert preprocess_for_ml(s) == prepare_dataset.preprocess_text(s)
+        once = preprocess_for_ml(s)
+        assert once == prepare_dataset.preprocess_text(s)
+        assert preprocess_for_ml(once) == once
 
 
 def test_health_reports_ml_model_loaded_and_unavailable(monkeypatch):
+    import app.main as app_main
+
+    monkeypatch.setattr(app_main, "load_classifier", lambda **kwargs: None)
     with TestClient(app) as tc:
-        # No model directory present locally -> lifespan loads unavailable gracefully with HTTP 200
+        # Missing/disabled model -> lifespan sets unavailable gracefully with HTTP 200
         res_unavail = tc.get("/api/health")
         assert res_unavail.status_code == 200
         assert res_unavail.json() == {"status": "ok", "ml_model": "unavailable"}

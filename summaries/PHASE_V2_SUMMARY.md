@@ -26,6 +26,7 @@
 
 - **D10 (Build-time download):** Model artifacts download into `backend/model/` during `render.yaml` `buildCommand` instead of runtime `/tmp` because Render free tier wipes `/tmp` on 15-minute idle sleep.
 - **D11 (Pure-NumPy word occlusion):** Replaced `lime` with single-batch word occlusion in [explainer.py](../backend/app/explainer.py) to avoid installing `scikit-image`, `scipy`, and `matplotlib` in the 512 MB Render image.
+- **Gate C Size Fallback (`distilbert-base-multilingual-cased`):** `google/muril-base-cased` INT8 ONNX was `227.26–227.57 MB` (`>= 150 MB` Gate C limit due to 197k vocab embeddings). Switched [train_classifier.ipynb](../backend/scripts/train_classifier.ipynb) to `distilbert-base-multilingual-cased` with `quant_pre_process(..., skip_symbolic_shape=True)` + per-channel `QInt8` quantization -> `129.59 MB` INT8 ONNX, `0.9904` F1, `100.0%` INT8 parity.
 - **Option A (`test_health.py`):** Updated exact-dict equality assertion in [test_health.py](../backend/tests/test_health.py) to validate `status == "ok"` and `ml_model in {"loaded", "unavailable"}`.
 
 ---
@@ -34,6 +35,8 @@
 
 - **`pip install --target --upgrade` erased `google/genai`:** Resolved by merge-copying `google-genai` and `google-auth` back into `backend/.venv/Lib/site-packages/google/` alongside `protobuf` (logged in [MISTAKES.md](../mdfiles/MISTAKES.md)).
 - **Post-mask deduplication skew & PNR digits:** Balanced ham proportionally (`3,632` rows, `48.1%` scam) and scoped leak assertion to `PHONE_RE` (`[6-9]\d{9}`) so 32 legitimate Railway PNR rows stay intact.
+- **Pre-processed `test.csv` token case bug:** Calling `preprocess_for_ml()` on already-masked rows lowercased `[URL]` -> `[url]`, breaking cased single-token IDs (`0.9807` -> restored `0.9904` F1). Fixed idempotently in [normalize.py](../backend/app/normalize.py).
+- **BERT/MuRIL un-preprocessed INT8 collapse & `transformers 5.22.1` API:** `warmup_ratio` was removed (`warmup_steps=40`), and raw `QUInt8` dynamic quantization collapsed parity (`68%`) until `quant_pre_process(..., skip_symbolic_shape=True)` + `per_channel=True, reduce_range=True, QInt8` restored `100%` INT8 label agreement.
 
 ---
 
@@ -43,7 +46,7 @@
 | --- | --- | --- |
 | Gate A (Repo hygiene) | PASSED | `feat/v2-ml-classifier` clean commits; 68/68 baseline tests green |
 | Gate B (Dataset prep) | PASSED | 3,632 unique rows, 48.1% scam, 0 leaks/overlaps |
-| Gate C (Colab training) | PENDING (HUMAN STEP) | Notebook AST-verified; run [train_classifier.ipynb](../backend/scripts/train_classifier.ipynb) on Colab T4 |
-| Gate D (Backend + stub ML) | PASSED (ML-on PENDING) | 81/81 pytest green; `eval.py --no-llm` 40/40 |
+| Gate C (Colab training & INT8 ONNX) | PASSED | `distilbert-base-multilingual-cased` INT8: `129.59 MB`, F1 `0.9904` (`mr=0.9756`, `hi=1.0000`, `hinglish=0.9935`, `en=0.9917`), 100% parity |
+| Gate D (Backend + Live INT8 ML) | PASSED | 81/81 pytest green; `eval.py --no-llm` 40/40; Rules+ML `40/40` (`46.1 ms` p95); RSS `279.5 MB` |
 | Gate E (Frontend build) | PASSED | `tsc -b && vite build` 0 errors; main chunk `341.1 KiB` (<= 370 KB) |
-| Gate F–G (Eval & Render) | PARTIAL (HUMAN STEP) | Rules baseline 40/40 in `EVALUATION.md`; HF upload & Render deploy pending Colab |
+| Gate F–G (Eval & Render) | HUMAN DEPLOY PENDING | Measured `EVALUATION.md` complete; Colab HF Hub login/upload cell + Render deploy ready for user |
