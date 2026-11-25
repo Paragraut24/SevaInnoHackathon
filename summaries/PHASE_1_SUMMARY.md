@@ -1,6 +1,6 @@
 # Phase 1 Summary - Triage Core
 
-Connected to: [PHASE_0_SUMMARY.md](PHASE_0_SUMMARY.md), [Phase 1 Plan.md](../Phase%201%20Plan.md), [Build Plan.md](../Build%20Plan.md), [TRD.md](../TRD.md)
+Connected to: [PHASE_0_SUMMARY.md](PHASE_0_SUMMARY.md), [Phase 1 Plan.md](../mdfiles/Phase%201%20Plan.md), [Build Plan.md](../mdfiles/Build%20Plan.md), [TRD.md](../mdfiles/TRD.md)
 
 ## What Was Built
 1. **Normalizer and rule engine** ([normalize.py](../backend/app/normalize.py), [rules.py](../backend/app/rules.py), `backend/data/patterns_{mr,hi,en}.json`): weighted cue groups per scam category, matched across all three languages regardless of script. Output is `RuleResult {score, matched, top_category, floor, known_script}`. A known script needs at least 2 cue groups including `authority`, `money` or `threat`; floor is high for a known script, medium for 2 groups, else low. Negation guard keeps "never share OTP" warnings from firing. Rules-only baseline on the 40 messages: 38/40 (hi_04 and holdout hi_07 missed).

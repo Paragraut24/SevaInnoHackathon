@@ -1,6 +1,6 @@
 # Phase 0 Summary — Foundations & Scaffolding
 
-Connected to: [Build Plan.md](../Build%20Plan.md), [Phase 1 Plan.md](../Phase%201%20Plan.md), [TRD.md](../TRD.md)
+Connected to: [Build Plan.md](../mdfiles/Build%20Plan.md), [Phase 1 Plan.md](../mdfiles/Phase%201%20Plan.md), [TRD.md](../mdfiles/TRD.md)
 
 ## What Was Built
 1. **Repository & Secret Hygiene:** Initialized git on `feat/mvp-scaffold`, added [.gitignore](../.gitignore), [.env.example](../.env.example), and [.githooks/pre-push](../.githooks/pre-push) (blocking `.env` tracking or leaked key prefixes).
@@ -28,5 +28,5 @@ Connected to: [Build Plan.md](../Build%20Plan.md), [Phase 1 Plan.md](../Phase%20
 - **Frontend build (`npm run build` in `frontend/`):** TypeScript + Vite build succeeded (`dist/` generated in 932 ms).
 - **Sightengine Free Tier key:** `GET /1.0/check.json` with `models=genai,deepfake` returned HTTP `200` (`api_status: success`).
 - **Gemini smoke test (`backend/scripts/smoke_gemini.py`):** Switched default `GEMINI_MODEL` from `gemini-3.8-flash` (which timed out at >15–25 s along with `3.7`/`3.6`/`3.5-flash`) to `gemini-3.5-flash-lite`, which returned schema-valid Marathi `LlmOut` JSON in ~2.3 s.
-- **Remaining manual cloud step (0.5):** Deploy `frontend/` to Vercel and `backend/` to Render/Railway using your `.env` secrets and set `ALLOWED_ORIGIN` to the Vercel URL, then proceed to [Phase 1 Plan.md](../Phase%201%20Plan.md).
+- **Remaining manual cloud step (0.5):** Deploy `frontend/` to Vercel and `backend/` to Render/Railway using your `.env` secrets and set `ALLOWED_ORIGIN` to the Vercel URL, then proceed to [Phase 1 Plan.md](../mdfiles/Phase%201%20Plan.md).
 

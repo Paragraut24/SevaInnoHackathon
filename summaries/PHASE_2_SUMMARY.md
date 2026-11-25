@@ -123,4 +123,4 @@
 - Two real phones: Chrome and Safari, PWA install, contrast, `ReadAloud` via Web Speech API.
 - Privacy drill: scan logs for message content after a full test run.
 
-Previous summary: [PHASE_1_SUMMARY.md](../backend/../summaries/PHASE_1_SUMMARY.md)
+Previous summary: [PHASE_1_SUMMARY.md](PHASE_1_SUMMARY.md)

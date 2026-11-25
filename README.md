@@ -177,13 +177,13 @@ npm run build
 
 ## Documentation Index
 
-- [Overview and Plan.md](Overview%20and%20Plan.md) — Problem statement, MVP scope, and challenge fit
-- [PRD.md](PRD.md) — User personas, stories, and acceptance criteria
-- [TRD.md](TRD.md) — Stack, API contracts, and non-functional requirements
-- [Architecture.md](Architecture.md) — Component breakdown and failure handling
-- [Build Plan.md](Build%20Plan.md) and [Phase 1 Plan.md](Phase%201%20Plan.md) — Phase-wise build tasks and Pre-Build Gate
-- [Risks and Privacy.md](Risks%20and%20Privacy.md) and [Access and Permissions.md](Access%20and%20Permissions.md) — Responsible AI rules and security controls
-- [Testing and Demo.md](Testing%20and%20Demo.md) and [Roadmap.md](Roadmap.md) — 40-message test plan, gates, and demo outline
+- [Overview and Plan.md](mdfiles/Overview%20and%20Plan.md) — Problem statement, MVP scope, and challenge fit
+- [PRD.md](mdfiles/PRD.md) — User personas, stories, and acceptance criteria
+- [TRD.md](mdfiles/TRD.md) — Stack, API contracts, and non-functional requirements
+- [Architecture.md](mdfiles/Architecture.md) — Component breakdown and failure handling
+- [Build Plan.md](mdfiles/Build%20Plan.md) and [Phase 1 Plan.md](mdfiles/Phase%201%20Plan.md) — Phase-wise build tasks and Pre-Build Gate
+- [Risks and Privacy.md](mdfiles/Risks%20and%20Privacy.md) and [Access and Permissions.md](mdfiles/Access%20and%20Permissions.md) — Responsible AI rules and security controls
+- [Testing and Demo.md](mdfiles/Testing%20and%20Demo.md) and [Roadmap.md](mdfiles/Roadmap.md) — 40-message test plan, gates, and demo outline
 
 ---
 

@@ -21,3 +21,7 @@ frontend/dist/
 .DS_Store
 Thumbs.db
 
+# ML models (downloaded at build time; dataset CSVs under backend/data/ml_dataset/ are small and tracked)
+backend/model/
+*.onnx
+
