@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-11-25T12:30:50.052123+00:00",
+  "random_seed": 42,
+  "sources": {
+    "D1": "indian_call_scams_hinglish_sample.csv",
+    "D3": "multilingual_mr_hi_en.csv",
+    "D2_skipped": "marathi_scam_ham.csv (100% subset of D3)"
+  },
+  "preprocessing": {
+    "nfc_normalize": true,
+    "lowercase": true,
+    "url_masking": "[URL]",
+    "phone_masking": "[PHONE]",
+    "entity_masking_order": "URL first, then phone"
+  },
+  "quarantine": {
+    "testset_path": "messages.csv",
+    "testset_texts_removed": 31
+  },
+  "deduplication": {
+    "d1_duplicates_removed": 121,
+    "post_mask_duplicates_removed": 605,
+    "ham_downsampled_for_balance": 331,
+    "non_mobile_10_digit_rows": 32
+  },
+  "splits": {
+    "train": {
+      "rows": 2542,
+      "scam": 1222,
+      "ham": 1320,
+      "languages": {
+        "Hindi": 613,
+        "Marathi": 607,
+        "English": 609,
+        "Hinglish": 713
+      }
+    },
+    "val": {
+      "rows": 545,
+      "scam": 262,
+      "ham": 283,
+      "languages": {
+        "Marathi": 131,
+        "Hinglish": 152,
+        "Hindi": 130,
+        "English": 132
+      }
+    },
+    "test": {
+      "rows": 545,
+      "scam": 262,
+      "ham": 283,
+      "languages": {
+        "Hinglish": 153,
+        "Hindi": 132,
+        "Marathi": 130,
+        "English": 130
+      }
+    }
+  },
+  "total_unique_texts": 3632
+}

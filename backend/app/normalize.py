@@ -24,6 +24,24 @@ URL_RE = re.compile(
 URL_TRAILING = ".,;:!?)]}>'\"\u0964"
 
 PHONE_RE = re.compile(r"(?<![0-9])(?:(?:\+?91|0)[ -]?)?([6-9](?:[ -]?[0-9]){9})(?![0-9])")
+URL_MASK_TOKEN = "[URL]"
+PHONE_MASK_TOKEN = "[PHONE]"
+
+
+def _replace_url(match: re.Match) -> str:
+    """Replace matched URL while preserving trailing punctuation."""
+    raw = match.group()
+    stripped = raw.rstrip(URL_TRAILING)
+    suffix = raw[len(stripped):]
+    return f"{URL_MASK_TOKEN}{suffix}"
+
+
+def preprocess_for_ml(s: str) -> str:
+    """Normalize text and mask URLs and Indian mobile numbers identically for training and inference."""
+    text = normalize_text(s)
+    text = URL_RE.sub(_replace_url, text)
+    text = PHONE_RE.sub(PHONE_MASK_TOKEN, text)
+    return " ".join(text.split())
 
 
 def normalize_text(s: str) -> str:
