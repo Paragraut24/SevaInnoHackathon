@@ -87,5 +87,11 @@
   "dashboard_col_reports": "तक्रारी",
   "dashboard_col_top": "मुख्य प्रकार",
   "read_aloud": "ऐका (आवाज)",
-  "read_aloud_stop": "थांबवा"
+  "read_aloud_stop": "थांबवा",
+  "ml_confidence_label": "पॅटर्न वर्गीकरण खात्री",
+  "token_highlights_title": "या तपासणीवर परिणाम करणारे शब्द",
+  "token_highlight_higher": "जास्त धोक्याचा संकेत",
+  "token_highlight_lower": "कमी धोक्याचा संकेत",
+  "explain_button": "कोणत्या शब्दांमुळे हा संकेत मिळाला ते पहा",
+  "explain_loading": "मुख्य शब्द तपासत आहे…"
 }

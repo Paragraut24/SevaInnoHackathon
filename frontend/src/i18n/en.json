@@ -87,5 +87,11 @@
   "dashboard_col_reports": "Reports",
   "dashboard_col_top": "Top type",
   "read_aloud": "Listen (Read aloud)",
-  "read_aloud_stop": "Stop"
+  "read_aloud_stop": "Stop",
+  "ml_confidence_label": "Pattern classifier confidence",
+  "token_highlights_title": "Words that influenced this check",
+  "token_highlight_higher": "Higher-risk indicator",
+  "token_highlight_lower": "Lower-risk indicator",
+  "explain_button": "Show which words triggered this",
+  "explain_loading": "Finding key words..."
 }

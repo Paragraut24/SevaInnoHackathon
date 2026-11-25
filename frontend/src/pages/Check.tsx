@@ -6,22 +6,40 @@ import { ApiError, MAX_TEXT_LENGTH, triage, type Lang, type TriageResult } from 
 export default function Check() {
   const { t, i18n } = useTranslation();
   const [text, setText] = useState("");
+  const [lastText, setLastText] = useState("");
   const [result, setResult] = useState<TriageResult | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [explaining, setExplaining] = useState(false);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     try {
-      setResult(await triage(text, i18n.language as Lang));
+      const next = await triage(text, i18n.language as Lang);
+      setResult(next);
+      setLastText(text);
     } catch (err) {
       setResult(null);
       const known = err instanceof ApiError ? err : null;
       setError(known?.message || t(known?.code === "network" ? "error_network" : "error_generic"));
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleExplain = async () => {
+    if (!lastText || explaining) return;
+    setExplaining(true);
+    setError("");
+    try {
+      setResult(await triage(lastText, i18n.language as Lang, true));
+    } catch (err) {
+      const known = err instanceof ApiError ? err : null;
+      setError(known?.message || t(known?.code === "network" ? "error_network" : "error_generic"));
+    } finally {
+      setExplaining(false);
     }
   };
 
@@ -62,7 +80,7 @@ export default function Check() {
           </p>
         )}
       </form>
-      {result && <ResultCard result={result} />}
+      {result && <ResultCard result={result} onExplain={handleExplain} explaining={explaining} />}
     </>
   );
 }

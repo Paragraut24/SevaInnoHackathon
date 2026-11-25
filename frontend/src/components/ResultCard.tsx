@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ReadAloud from "./ReadAloud";
+import TokenHighlights from "./TokenHighlights";
 import type { Risk, TriageResult } from "../lib/api";
 
 const RISK_STYLES: Record<Risk, { card: string; badge: string; bar: string }> = {
@@ -8,7 +9,13 @@ const RISK_STYLES: Record<Risk, { card: string; badge: string; bar: string }> = 
   high: { card: "border-red-300", badge: "bg-red-100 text-red-900", bar: "bg-red-700" },
 };
 
-export default function ResultCard({ result }: { result: TriageResult }) {
+interface ResultCardProps {
+  result: TriageResult;
+  onExplain?: () => void;
+  explaining?: boolean;
+}
+
+export default function ResultCard({ result, onExplain, explaining = false }: ResultCardProps) {
   const { t } = useTranslation();
   const style = RISK_STYLES[result.risk];
   const confidence = Math.round(result.confidence * 100);
@@ -72,6 +79,33 @@ export default function ResultCard({ result }: { result: TriageResult }) {
           <div className={`h-2 rounded-full ${style.bar}`} style={{ width: `${confidence}%` }} />
         </div>
       </div>
+
+      {result.ml_confidence != null && (
+        <div className="space-y-3 pt-1">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="flex flex-wrap items-center gap-2 text-sm text-slate-600">
+              <span className="inline-flex items-center px-2 py-1 rounded-md bg-slate-100 border border-slate-200 text-xs font-mono text-slate-800">
+                ML {Math.round(result.ml_confidence * 100)}%
+              </span>
+              <span>{t("ml_confidence_label")}</span>
+            </div>
+            {onExplain && (!result.top_tokens || result.top_tokens.length === 0) && (
+              <button
+                type="button"
+                onClick={onExplain}
+                disabled={explaining}
+                className="px-3 py-1.5 rounded-lg border border-[#0f4c81] text-[#0f4c81] text-sm font-medium hover:bg-[#0f4c81] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#0f4c81] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                {explaining ? t("explain_loading") : t("explain_button")}
+              </button>
+            )}
+          </div>
+
+          {result.top_tokens && result.top_tokens.length > 0 && (
+            <TokenHighlights tokens={result.top_tokens} />
+          )}
+        </div>
+      )}
 
       {result.show_helpline && (
         <a

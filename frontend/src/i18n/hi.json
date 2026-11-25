@@ -87,5 +87,11 @@
   "dashboard_col_reports": "शिकायतें",
   "dashboard_col_top": "मुख्य प्रकार",
   "read_aloud": "सुनें (आवाज)",
-  "read_aloud_stop": "रोकें"
+  "read_aloud_stop": "रोकें",
+  "ml_confidence_label": "पैटर्न वर्गीकरण भरोसा",
+  "token_highlights_title": "इस जांच को प्रभावित करने वाले शब्द",
+  "token_highlight_higher": "अधिक जोखिम का संकेत",
+  "token_highlight_lower": "कम जोखिम का संकेत",
+  "explain_button": "किन शब्दों से यह संकेत मिला, देखें",
+  "explain_loading": "मुख्य शब्द देखे जा रहे हैं…"
 }

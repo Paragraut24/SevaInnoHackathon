@@ -1,6 +1,11 @@
 export type Lang = "mr" | "hi" | "en";
 export type Risk = "low" | "medium" | "high";
 
+export interface TokenWeight {
+  token: string;
+  weight: number;
+}
+
 export interface TriageResult {
   risk: Risk;
   scam_type: string;
@@ -10,6 +15,8 @@ export interface TriageResult {
   lang: Lang;
   mode: "full" | "quick";
   show_helpline: boolean;
+  ml_confidence?: number | null;
+  top_tokens?: TokenWeight[];
 }
 
 export const MAX_TEXT_LENGTH = 2000;
@@ -30,12 +37,13 @@ export class ApiError extends Error {
   }
 }
 
-export async function triage(text: string, lang: Lang): Promise<TriageResult> {
+export async function triage(text: string, lang: Lang, explain = false): Promise<TriageResult> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+  const endpoint = explain ? `${API_BASE}/api/triage?explain=true` : `${API_BASE}/api/triage`;
   let res: Response;
   try {
-    res = await fetch(`${API_BASE}/api/triage`, {
+    res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-Lang": lang },
       body: JSON.stringify({ text, lang }),
