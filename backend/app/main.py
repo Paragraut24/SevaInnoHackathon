@@ -1,4 +1,6 @@
+from contextlib import asynccontextmanager
 import logging
+from pathlib import Path
 import time
 import uuid
 
@@ -7,6 +9,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi.errors import RateLimitExceeded
 
+from app.classifier import load_classifier
 from app.config import get_settings
 from app.errors import error_response
 from app.limiter import limiter
@@ -20,11 +23,24 @@ logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger("sajag.access")
 
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Load optional ONNX classifier once at startup and release on shutdown."""
+    settings = get_settings()
+    model_dir = Path(settings.ml_model_dir) if settings.ml_model_dir else None
+    app.state.classifier = load_classifier(model_dir=model_dir, enabled=settings.ml_enabled)
+    try:
+        yield
+    finally:
+        app.state.classifier = None
+
+
 def create_app() -> FastAPI:
     """Create stateless FastAPI app with CORS, rate limiting, localized errors and metadata-only logging."""
     settings = get_settings()
-    app = FastAPI(title="Sajag API", version="0.1.0")
+    app = FastAPI(title="Sajag API", version="0.2.0", lifespan=lifespan)
     app.state.limiter = limiter
+    app.state.classifier = None
 
     app.add_middleware(
         CORSMiddleware,
@@ -66,8 +82,9 @@ def create_app() -> FastAPI:
         return error_response(request, 500, "internal")
 
     @app.get("/api/health", response_model=HealthOut)
-    def health() -> HealthOut:
-        return HealthOut(status="ok")
+    def health(request: Request) -> HealthOut:
+        loaded = getattr(request.app.state, "classifier", None) is not None
+        return HealthOut(status="ok", ml_model="loaded" if loaded else "unavailable")
 
     app.include_router(triage_router)
     app.include_router(link_check_router)

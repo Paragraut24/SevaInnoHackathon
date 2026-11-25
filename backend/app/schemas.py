@@ -4,6 +4,7 @@ from pydantic import BaseModel, ConfigDict, Field
 Risk = Literal["low", "medium", "high"]
 Lang = Literal["mr", "hi", "en"]
 Mode = Literal["full", "quick"]
+MlModelStatus = Literal["loaded", "unavailable"]
 
 
 class TriageIn(BaseModel):
@@ -31,12 +32,21 @@ class LlmOut(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0, description="Model confidence 0..1.")
 
 
+class TokenWeight(BaseModel):
+    """Single word-importance score from the occlusion explainer."""
+
+    token: str
+    weight: float
+
+
 class TriageOut(LlmOut):
-    """Final server response after rule-floor fusion."""
+    """Final server response after 3-signal fusion."""
 
     lang: Lang
     mode: Mode
     show_helpline: bool
+    ml_confidence: float | None = None
+    top_tokens: list[TokenWeight] = Field(default_factory=list)
 
 
 class ErrorOut(BaseModel):
@@ -48,4 +58,5 @@ class ErrorOut(BaseModel):
 
 class HealthOut(BaseModel):
     status: Literal["ok"]
+    ml_model: MlModelStatus = "unavailable"
 

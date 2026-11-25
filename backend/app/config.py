@@ -4,6 +4,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT_ENV = Path(__file__).resolve().parents[2] / ".env"
 
+ML_CONFIDENCE_HIGH = 0.85
+ML_CONFIDENCE_MEDIUM = 0.55
+ML_TRUST_THRESHOLD = 0.55
+ML_MAX_LENGTH = 128
+
 
 class Settings(BaseSettings):
     """Application settings loaded from environment variables or root .env."""
@@ -19,6 +24,9 @@ class Settings(BaseSettings):
     sightengine_api_user: str = ""
     sightengine_api_secret: str = ""
     hf_token: str = ""
+    hf_model_repo: str = ""
+    ml_enabled: bool = True
+    ml_model_dir: str = ""
     allowed_origin: str = "http://localhost:5173,https://seva-inno-hackathon-project.vercel.app"
     rate_limit_per_min: int = 20
 

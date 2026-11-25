@@ -8,7 +8,9 @@ client = TestClient(app)
 def test_health_ok_and_request_id():
     res = client.get("/api/health")
     assert res.status_code == 200
-    assert res.json() == {"status": "ok"}
+    data = res.json()
+    assert data["status"] == "ok"
+    assert data["ml_model"] in {"loaded", "unavailable"}
     assert "x-request-id" in res.headers
 
 
