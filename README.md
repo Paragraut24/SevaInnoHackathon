@@ -53,9 +53,21 @@ flowchart LR
 
 ---
 
+## Custom ML Classifier (V2)
+
+Sajag V2 upgrades text triage from 2-signal fusion to **3-signal fusion** (`Rules Floor + INT8 ONNX MuRIL Classifier + Gemini Reasoning`) with on-demand word-importance explainability:
+
+- **Model & Corpus:** Fine-tuned `google/muril-base-cased` binary scam classifier trained on 3,632 deduplicated, entity-masked (`[URL]`, `[PHONE]`) Indian scam and legitimate messages across Marathi, Hindi, Hinglish, and English (`backend/scripts/train_classifier.ipynb`).
+- **Lightweight Runtime:** Exported to INT8 quantized ONNX (`onnxruntime` + Rust `tokenizers` via `tokenizer.json`, without loading `transformers` or `torch` in production) and downloaded at Render build time (`backend/scripts/download_model.py`).
+- **3-Signal Fusion Invariants:** Only confident scam predictions (`confidence >= 0.55`) can raise risk; confident non-scam predictions never lower the deterministic rule floor. If the ONNX model is unavailable, the API degrades cleanly to 2-signal mode (`ml_confidence: null`).
+- **Word-Importance Chips (`?explain=true`):** Single-batch pure-NumPy word-occlusion explainer (`backend/app/explainer.py`, capped at 100 variants and a 2.0 s budget) surfaces up to 6 words that pushed risk higher or lower.
+- **Evaluation Report:** See [EVALUATION.md](EVALUATION.md) for dataset statistics, measured rules-only baseline (40/40), and post-training ML evaluation instructions.
+
+---
+
 ## Tech Stack
 
-- **Backend:** Python, FastAPI, Uvicorn, Pydantic v2 (`pydantic-settings`), `google-genai` (Interactions API), `slowapi`, `httpx`, `pytest`
+- **Backend:** Python, FastAPI, Uvicorn, Pydantic v2 (`pydantic-settings`), `google-genai` (Interactions API), `onnxruntime`, `tokenizers`, `numpy`, `huggingface-hub`, `slowapi`, `httpx`, `pytest`
 - **Frontend:** React 19, Vite 6, TypeScript, Tailwind CSS v4 (`@tailwindcss/vite`), `i18next` / `react-i18next`, PWA manifest + service worker
 - **External Services (MVP):** Google Gemini API (`client.interactions.create`), Sightengine Free Tier (images/video keyframes), Hugging Face Inference API (optional audio signal)
 - **Persistence:** None (stateless in-memory request processing; static JSON/CSV assets only)
@@ -127,7 +139,9 @@ git config core.hooksPath .githooks
 | `GEMINI_MODEL` | `.env` | Model ID (`gemini-3.8-flash` in Phase 0 scaffold; `gemini-3.5-flash-lite` recommended on Free Tier for ~2.3 s latency) |
 | `SIGHTENGINE_API_USER` | `.env` | Sightengine API user (Phase 2 media check) |
 | `SIGHTENGINE_API_SECRET` | `.env` | Sightengine API secret (Phase 2 media check) |
-| `HF_TOKEN` | `.env` | Optional Hugging Face token for audio inference (Phase 2) |
+| `HF_TOKEN` | `.env` | Optional Hugging Face token for audio inference and private model download |
+| `HF_MODEL_REPO` | `.env` | Hugging Face Hub repo ID for V2 ONNX classifier build-time download |
+| `ML_ENABLED` | `.env` | Enable ONNX ML classifier loading at startup (default: `true`) |
 | `ALLOWED_ORIGIN` | `.env` | Comma-separated CORS origins (default: `http://localhost:5173`) |
 | `RATE_LIMIT_PER_MIN` | `.env` | Per-IP rate limit (default: `20`) |
 | `VITE_API_BASE_URL` | `frontend/.env` | Backend URL for the frontend (default: `http://localhost:8000`) |
